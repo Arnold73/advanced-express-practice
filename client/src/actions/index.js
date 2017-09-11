@@ -99,3 +99,69 @@ export function createComment(v) {
     }).then(() => dispatch(loadComments()));
   };
 }
+export function getProduct(id) {
+  return function (dispatch) {
+    fetch("/products/" + id)
+    .then( (response) => {
+      return response.json();
+    }).then((id) => {
+      dispatch(productsLoaded(id));
+    });
+  }
+}
+export function getVehicle(id) {
+  return function (dispatch) {
+    fetch("/vehicles/" + id)
+    .then( (response) => {
+      return response.json();
+    }).then((id) => {
+      dispatch(vehiclesLoaded(id));
+    });
+  }
+}
+export function getComment(id) {
+  return function (dispatch) {
+    fetch("/comments/" + id)
+    .then( (response) => {
+      return response.json();
+    }).then((id) => {
+      dispatch(commentsLoaded(id));
+    });
+  }
+}
+export function getContact(id) {
+  return function (dispatch) {
+    fetch("/contacts/" + id)
+    .then( (response) => {
+      return response.json();
+    }).then((id) => {
+      dispatch(contactsLoaded(id));
+    });
+  }
+}
+export function getProductDone(product) {
+  return {
+    type: "GET_PRODUCT_DONE",
+    value: product
+  };
+}
+
+export function getVehicleDone(vehicle) {
+  return {
+    type: "GET_VEHICLE_DONE",
+    value: vehicle
+  };
+}
+
+export function getComment(comment) {
+  return {
+    type: "GET_COMMENT_DONE",
+    value: comment
+  };
+}
+export function getContact(contact) {
+  return {
+    type: "GET_CONTACT_DONE",
+    value: contact
+  };
+}

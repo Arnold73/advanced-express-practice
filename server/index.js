@@ -5,6 +5,10 @@ import products from "./products";
 import vehicle from "./vehicles";
 import contacts from "./contacts";
 
+import mongoose from "mongoose";
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/advanced-express-practice");
+
 const app = express();
 app.use(bodyParser.json());
 
