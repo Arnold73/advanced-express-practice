@@ -4,10 +4,6 @@ import AppContainer from "./AppContainer";
 import "./index.css";
 import store from "./store";
 import {Provider} from "react-redux";
-import mongoose from "mongoose";
-
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/advanced-express-practice");
 
 ReactDOM.render(
   <Provider store={store}><AppContainer /></Provider>,

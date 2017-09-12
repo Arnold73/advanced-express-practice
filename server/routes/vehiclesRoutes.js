@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import {list,show,create,update,remove} from "../controllers/VihiclesController";
+import {list,show,create,update,remove} from "../controllers/VehiclesController";
 
 
 router.get("/vehicles", list);

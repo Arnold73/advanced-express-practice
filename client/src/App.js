@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Main from "./components/Main";
-
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 class App extends Component {
   constructor() {
     super();
@@ -22,5 +22,3 @@ class App extends Component {
   }
 }
 export default (App);
-
-
